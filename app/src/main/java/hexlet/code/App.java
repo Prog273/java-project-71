@@ -6,19 +6,18 @@ import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 import picocli.CommandLine.Command;
 
-import java.io.File;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
+import java.util.concurrent.Callable;
 
 @Command(name = "gendiff",
         mixinStandardHelpOptions = true,
         version = "gendiff 1.0",
         description = "Compares two configuration files and shows a difference.")
 
-public class App implements Runnable {
+public class App implements Callable {
 
     @Parameters(index = "0", description = "path to first path")
     private String filepath1;
@@ -60,7 +59,8 @@ public class App implements Runnable {
     }
 
     @Override
-    public void run() {
+    public Object call() {
 
+        return null;
     }
 }
