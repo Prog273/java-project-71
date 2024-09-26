@@ -22,7 +22,7 @@ public class App implements Callable {
     @Parameters(index = "0", description = "path to first path")
     private String filepath1;
 
-    @Parameters(index = "0", description = "path to second path")
+    @Parameters(index = "1", description = "path to second path")
     private String filepath2;
 
     @Option(names = {"-f", "--format"}, description = "output format [default: ${DEFAULT-VALUE}]", defaultValue = "stylish")
